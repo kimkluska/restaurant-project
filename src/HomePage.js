@@ -12,11 +12,18 @@ export function loadHomePage(){
     p1Element.classList.add("home-paragraph");
     p1Element.innerHTML = "bla bla bla";
 
-    document.body.style.backgroundImage = "url('" + tonicBackground + "')";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "end";
-    document.body.style.backgroundAttachment = "fixed";
+
+    const backgroundLayer = document.createElement("div");
+    backgroundLayer.style.backgroundImage = "url('" + tonicBackground + "')";
+    backgroundLayer.style.position = "fixed";
+    backgroundLayer.style.top = "0";
+    backgroundLayer.style.left = "0";
+    backgroundLayer.style.width = "100%";
+    backgroundLayer.style.height = "100%";
+    backgroundLayer.style.zIndex = "-1";
+    backgroundLayer.style.backgroundRepeat = "no-repeat";
+    backgroundLayer.style.backgroundSize = "cover";
+    document.body.appendChild(backgroundLayer);
 
     contentDiv.appendChild(h1Element);
     contentDiv.appendChild(p1Element);
