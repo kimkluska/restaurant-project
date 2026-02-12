@@ -5,7 +5,7 @@
 
 body
 {
-    background-color: rgb(232, 213, 250);
+    background-color: rgb(252, 218, 218);
     height: 100%;
     margin: 0;
     padding: 0;
@@ -31,10 +31,19 @@ body
     margin-left: 30px;
 }
 
+.topbar img
+{
+    width: 90px;
+    height: 80px;
+    border-radius: 6.6px;
+    display: block;
+    margin-top: -10px;
+}
+
 nav
 {
     display: flex;
-    gap: 10px;
+    gap: 17px;
     justify-content: center;
     margin-left: 420px;
 }
@@ -49,6 +58,7 @@ nav button
     cursor: pointer;
     border-radius: 5px;
     color: white;
+    transition: all 0.35s ease;
 
 }
 nav button:hover
@@ -58,15 +68,36 @@ nav button:hover
 }
 
 /* Home Page */
+
 .home-title
 {
-    text-align: center;
-    font-size: 36px;
-    margin-top: 50px;
+    font-size: 56px;
+    color: #91030f;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #490202;
+
 }
 .home-paragraph
 {
+    font-size: 28px;
+}
+
+.content
+{
+    display: flex;
+    position: relative;
+    align-items: center;
     text-align: center;
-    font-size: 18px;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+    width: 100%;
+    line-height: 0;
+}
+
+.tonic-cooks-image
+{
+    width: 400px;
+    height: auto;
     margin-top: 20px;
 }
